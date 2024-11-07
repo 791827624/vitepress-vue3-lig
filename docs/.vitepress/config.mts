@@ -15,7 +15,7 @@ import legacy from '@vitejs/plugin-legacy';
 
 
 const baseUrl = process.env.NODE_ENV === 'production'
-  ? '/path/to/your/docs/'
+  ? '/'
   : '/';
 
 const BASIC = [
