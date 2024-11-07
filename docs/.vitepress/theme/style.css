@@ -43,10 +43,13 @@
  *   in custom container, badges, etc.
  * -------------------------------------------------------------------------- */
 
-#VPContent {
+ #VPContent {
   padding-right: 0px;
   > div {
     padding: 50px 0px;
+    .VPDocAsideOutline {
+      display: none;
+    }
     .aside {
       position: sticky;
       top: 78px;

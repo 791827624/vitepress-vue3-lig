@@ -11,7 +11,7 @@ import 'vitepress-plugin-sandpack/dist/style.css'
 import * as ElementPlusIconsVue from '@element-plus/icons-vue'
 import 'vitepress-theme-demoblock/dist/theme/styles/index.css'
 import { useComponents } from './useComponents'
-import MyLayout from './MyLayout';
+import MobileView from './MobileView.jsx';
 import { ConfigProvider } from 'vant';
 
 
@@ -21,8 +21,9 @@ export default {
   Layout: () => {
     return h(DefaultTheme.Layout, ConfigProvider, {
       'aside-outline-before': (e) => {
-        return h(MyLayout)
-      }
+        return h(MobileView)
+      },
+      // 'doc-top': () => h(DocTop)
     })
   },
   enhanceApp(ctx) {

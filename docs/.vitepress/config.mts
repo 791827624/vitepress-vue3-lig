@@ -4,7 +4,6 @@ import Components from 'unplugin-vue-components/vite';
 import container from 'markdown-it-container';
 import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
 import { renderSandbox } from 'vitepress-plugin-sandpack';
-import inlineSFC from 'vite-plugin-vitepres-inline-sfc'
 import { demoBlockPlugin, demoblockVitePlugin } from 'vitepress-theme-demoblock'
 import vueJsxPlugin from "@vitejs/plugin-vue-jsx";
 import { resolve } from 'path';
@@ -39,7 +38,6 @@ export default defineConfig({
   },
   vite: {
     plugins: [
-      inlineSFC(),
       vueJsxPlugin(),
       legacy({
         targets: ['defaults', 'not IE 11']

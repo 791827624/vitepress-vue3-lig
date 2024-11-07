@@ -13,6 +13,7 @@
     "unplugin-vue-components": "^0.27.4",
     "vant": "^4.9.8",
     "vite-plugin-require-transform": "^1.0.21",
+    "vite-plugin-vitepres-inline-sfc": "^1.0.2",
     "vitepress": "^1.4.1",
     "vitepress-plugin-sandpack": "^1.1.4"
   },
@@ -31,6 +32,7 @@
     "markdown-it-jsx": "^1.1.0",
     "react": "^18.3.1",
     "unplugin-element-plus": "^0.8.0",
+    "vitepress-theme-demoblock": "^3.0.7",
     "vue": "3.3.4",
     "vue-router": "^4.4.5"
   }
