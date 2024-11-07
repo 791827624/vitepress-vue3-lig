@@ -8,7 +8,6 @@ import { demoBlockPlugin, demoblockVitePlugin } from 'vitepress-theme-demoblock'
 import vueJsxPlugin from "@vitejs/plugin-vue-jsx";
 import { resolve } from 'path';
 import requireTransform from 'vite-plugin-require-transform';
-import { BASIC, BUSINESS } from "./componentsConfig";
 import ReactivityTransform from '@vue-macros/reactivity-transform/vite'
 import legacy from '@vitejs/plugin-legacy';
 
@@ -19,6 +18,27 @@ const baseUrl = process.env.NODE_ENV === 'production'
   ? '/path/to/your/docs/'
   : '/';
 
+const BASIC = [
+  {
+    text: "Name Input 姓名输入框",
+    link: "/examples/NameInput",
+    name: "NameInput",
+  },
+  {
+    text: "Id Card Input 身份证号输入框",
+    link: "/examples/IdCardInput",
+    name: "IdCardInput",
+  },
+  {
+    text: "Mobile Input 手机号输入框",
+    link: "/examples/MobileInput",
+    name: "MobileInput",
+  },
+];
+
+const BUSINESS = [
+  { text: "Base Form 动态表单", link: "/examples/BaseForm", name: "BaseForm" },
+];
 
 
 
@@ -36,7 +56,9 @@ export default defineConfig({
   vue: {
 
   },
+  mpa: true,
   vite: {
+
     plugins: [
       vueJsxPlugin(),
       legacy({
@@ -54,6 +76,7 @@ export default defineConfig({
         fileRegex: /.js$|.jsx$/  // 使用正则表达式匹配需要作用的文件
       }),
     ],
+
     css: {
       preprocessorOptions: {
         scss: {
@@ -67,6 +90,9 @@ export default defineConfig({
         '~': resolve(__dirname, 'docs/.vitepress/components')
       },
       // extensions: [".ts", ".js", ".json", ".tsx"],
+    },
+    ssr: {
+      noExternal: ['workbox-window', /vue-i18n/, /element-plus/],
     }
   },
   themeConfig: {

@@ -1,5 +1,5 @@
 import { useData, useRoute, useRouter } from "vitepress";
-import { get } from "lodash";
+import lodash from "lodash";
 import {
   computed,
   defineAsyncComponent,
@@ -12,6 +12,7 @@ import {
 
 export default defineComponent({
   setup() {
+    const { get } = lodash;
     const route = useRoute();
     const title = ref(get(useData(), "page").value.title);
     const reactComponent = ref(
