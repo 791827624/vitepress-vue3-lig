@@ -1,7 +1,9 @@
 # Button 按钮
 
-<button>我是一个按钮</button>
+:::demo
 
 ```vue
-<button>我是一个按钮</button>
+<template>
+  <el-button type="primary">我是一个按钮</el-button>
+</template>
 ```

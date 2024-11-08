@@ -1,9 +1,19 @@
 import { defineConfig } from 'vitepress'
+import { demoblockPlugin, demoblockVitePlugin } from 'vitepress-theme-demoblock'
+
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: "my components lib",
   description: "我的组件库",
+  markdown: {
+    config: (md) => {
+      md.use(demoblockPlugin)
+    }
+  },
+  vite: {
+    plugins: [demoblockVitePlugin()]
+  },
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [

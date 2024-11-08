@@ -1,0 +1,31 @@
+{
+    "compilerOptions": {
+        "baseUrl": ".",
+        // vue中tsx的配置
+        "jsx": "preserve",
+        "jsxImportSource": "vue",
+        "paths": {
+            "@/*": [
+                "docs/*"
+            ],
+            "~/*": [
+                "docs/.vitepress/components/*"
+            ],
+        },
+        "types": [
+            "@vue-macros/reactivity-transform/macros-global" /* ... */
+        ]
+    },
+    "include": [
+        "src/**/*.ts",
+        "src/**/*.tsx",
+        "src/**/*.vue",
+        "types/*.d.ts"
+    ],
+    "exclude": [
+        "node_modules/**",
+        "dist/**",
+        "**/*.js",
+        "vite.config.ts"
+    ]
+}
