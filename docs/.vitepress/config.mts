@@ -1,5 +1,6 @@
 import { defineConfig } from 'vitepress'
 import { demoblockPlugin, demoblockVitePlugin } from 'vitepress-theme-demoblock'
+import vueJsxPlugin from "@vitejs/plugin-vue-jsx";
 
 
 // https://vitepress.dev/reference/site-config
@@ -12,7 +13,7 @@ export default defineConfig({
     }
   },
   vite: {
-    plugins: [demoblockVitePlugin()]
+    plugins: [demoblockVitePlugin(), vueJsxPlugin()]
   },
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
@@ -32,7 +33,7 @@ export default defineConfig({
       {
         text: '基础组件',
         items: [
-          { text: 'Button 按钮', link: '/example/Button/index.md' },
+          { text: 'Button 按钮', link: '/example/DsyButton/index.md' },
         ]
       },
     ],
