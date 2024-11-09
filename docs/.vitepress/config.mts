@@ -13,13 +13,18 @@ export default defineConfig({
     }
   },
   vite: {
-    plugins: [demoblockVitePlugin(), vueJsxPlugin()]
+    plugins: [demoblockVitePlugin(), vueJsxPlugin()],
+    optimizeDeps: {
+      include: ['pdf'], // 将pdf文件添加到include数组中
+      exclude: [], // 排除其他不需要优化的文件类型
+    }
   },
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: 'Home', link: '/' },
-      { text: '快速开始', link: '/quik-start' }
+      { text: '快速开始', link: '/quik-start' },
+      { text: '个人简历', link: '/my-resume' }
     ],
 
     sidebar: [
