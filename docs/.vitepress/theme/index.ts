@@ -2,7 +2,7 @@
 import { h } from 'vue'
 import type { Theme } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
-import MobileView from './MobileView.vue'
+import MobileView from './MobileView.jsx'
 import './style.css'
 import ElementPlus from "element-plus";
 import "element-plus/theme-chalk/index.css";

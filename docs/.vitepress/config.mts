@@ -34,6 +34,7 @@ export default defineConfig({
         text: '基础组件',
         items: [
           { text: 'Button 按钮', link: '/example/DsyButton/index.md' },
+          { text: 'Form 动态表单', link: '/example/DsyForm/index.md' },
         ]
       },
     ],
