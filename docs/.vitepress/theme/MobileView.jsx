@@ -15,7 +15,6 @@ import DsyFormDemo from "/example/DsyForm/demo.vue";
 export default defineComponent({
   setup() {
     const route = useRoute();
-    console.log("🚀 ~ setup ~ route:", route);
     const title = ref(useData().page.value.title);
     const routePath = ref(route.path);
     const reactComponent = ref(
@@ -23,8 +22,6 @@ export default defineComponent({
         () => import(/* @vite-ignore */ `${route.path}demo.vue`)
       )
     );
-    const isButton = computed(() => routePath.value.includes("DsyButton"));
-    const isForm = computed(() => routePath.value.includes("DsyForm"));
 
     watch(
       () => route,
@@ -42,6 +39,22 @@ export default defineComponent({
       }
     );
 
+    console.log(useData(), route);
+
+    const renderer = () => {
+      const component = routePath.value.split("/").filter(Boolean).pop();
+      switch (component) {
+        case "DsyButton":
+          return <DsyButtonDemo />;
+
+        case "DsyForm":
+          return <DsyFormDemo />;
+
+        default:
+          return <div />;
+      }
+    };
+
     return () => (
       <Suspense>
         <div>
@@ -56,10 +69,7 @@ export default defineComponent({
             <van-tag type="primary" plain size="large">
               组件示例
             </van-tag>
-            <DemoBlock>
-              {isButton.value && <DsyButtonDemo></DsyButtonDemo>}
-              {isForm.value && <DsyFormDemo></DsyFormDemo>}
-            </DemoBlock>
+            <DemoBlock>{renderer()}</DemoBlock>
           </van-space>
         </div>
       </Suspense>
