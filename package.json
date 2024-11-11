@@ -1,6 +1,7 @@
 {
   "devDependencies": {
     "@vitejs/plugin-vue-jsx": "^4.0.1",
+    "sass-embedded": "^1.80.6",
     "vitepress": "^1.5.0",
     "vitepress-theme-demoblock": "^3.0.7"
   },
@@ -8,7 +9,8 @@
     "docs:dev": "npm run register:components && vitepress dev docs",
     "docs:build": "npm run register:components && vitepress build docs",
     "docs:serve": "vitepress serve docs",
-    "register:components": "vitepress-rc"
+    "register:components": "vitepress-rc",
+    "docs:preview": "vitepress preview docs"
   },
   "dependencies": {
     "element-plus": "^2.8.7",

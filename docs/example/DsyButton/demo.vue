@@ -1,10 +1,3 @@
-# Button 按钮
-
-<script></script>
-
-:::demo
-
-```vue
 <template>
   <el-space direction="vertical" alignment="start" :size="20">
     <DsyButton :btnProps="btnProps.primary"></DsyButton>
@@ -44,4 +37,3 @@
     },
   });
 </script>
-```
