@@ -1,19 +1,19 @@
-import { defineComponent, ref } from "vue";
+import { defineComponent } from "vue";
 
-const Hero = defineComponent({
-  setup() {
-    const account = ref(1);
-
-    setInterval(() => {
-      account.value = account.value + 1;
-    }, 1000);
-
+const DsyButton = defineComponent({
+  props: {
+    btnProps: {
+      type: Object,
+    },
+  },
+  setup(props) {
+    console.log("🚀 ~ setup ~ props:", props);
     return () => (
-      <>
-        <div>数值{account.value}</div>
-      </>
+      <div>
+        <el-button {...props.btnProps}>我是一个按钮</el-button>
+      </div>
     );
   },
 });
 
-export default Hero;
+export default DsyButton;
