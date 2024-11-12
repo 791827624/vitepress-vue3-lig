@@ -11,6 +11,8 @@ import {
 } from "vue";
 import DsyButtonDemo from "/example/DsyButton/demo.vue";
 import DsyFormDemo from "/example/DsyForm/demo.vue";
+import "gitalk/dist/gitalk.css";
+import Gitalk from "gitalk";
 
 export default defineComponent({
   setup() {
@@ -58,19 +60,11 @@ export default defineComponent({
     return () => (
       <Suspense>
         <div>
-          <van-nav-bar title={title.value} />
-          <van-space
-            class="demo-container"
-            direction="vertical"
-            alignment="start"
-            size={20}
-            fill
-          >
-            <van-tag type="primary" plain size="large">
-              组件示例
-            </van-tag>
+          <div title={title.value} />
+          <div class="demo-container">
+            <div>组件示例</div>
             <DemoBlock>{renderer()}</DemoBlock>
-          </van-space>
+          </div>
         </div>
       </Suspense>
     );
