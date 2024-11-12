@@ -30,7 +30,7 @@ export default defineComponent({
                   owner: "791827624", // GitHub repository 所有者
                   repo: "vitepress-app", // GitHub repository
                   clientID: "Ov23licaXLbrHhVJTneq", // 自己的clientID
-                  clientSecret: "*****f39b3d75", // 自己的clientSecret
+                  clientSecret: "5cfad80414087f90e7bee0b3130fb0b549cd6b86", // 自己的clientSecret
                   admin: ["791827624"], // GitHub repository 所有者
                   labels: ["Gitalk"], // GitHub issue 的标签
                   createIssueManually: false, //如果当前页面没有相应的 isssue 且登录的用户属于 admin，则会自动创建 issue。如果设置为 true，则显示一个初始化页面，创建 issue 需要点击 init 按钮。
