@@ -28,7 +28,7 @@ export default defineComponent({
                 const gitment = new Gitalk({
                   id: route.data.title, // 可选，推荐设置为页面标题，因为会作为标签传给Github issues，且issues标签有长度限制。
                   owner: "791827624", // GitHub repository 所有者
-                  repo: "vitepress-app", // GitHub repository
+                  repo: "vitepress-vue3-lig", // GitHub repository
                   clientID: "Ov23licaXLbrHhVJTneq", // 自己的clientID
                   clientSecret: "5cfad80414087f90e7bee0b3130fb0b549cd6b86", // 自己的clientSecret
                   admin: ["791827624"], // GitHub repository 所有者
