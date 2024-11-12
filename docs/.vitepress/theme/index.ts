@@ -8,6 +8,7 @@ import ElementPlus from "element-plus";
 import "element-plus/theme-chalk/index.css";
 import 'vitepress-theme-demoblock/dist/theme/styles/index.css'
 import { useComponents } from './useComponents'
+import MyGitalk from './MyGitalk.jsx'
 
 
 
@@ -16,7 +17,8 @@ export default {
   Layout: () => {
     return h(DefaultTheme.Layout, null, {
       // https://vitepress.dev/guide/extending-default-theme#layout-slots
-      'aside-outline-before': () => h(MobileView)
+      'aside-outline-before': () => h(MobileView),
+      'doc-footer-before': () => h(MyGitalk)
 
     })
   },

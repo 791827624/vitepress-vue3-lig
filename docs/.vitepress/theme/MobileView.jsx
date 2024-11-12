@@ -11,6 +11,8 @@ import {
 } from "vue";
 import DsyButtonDemo from "/example/DsyButton/demo.vue";
 import DsyFormDemo from "/example/DsyForm/demo.vue";
+import "gitalk/dist/gitalk.css";
+import Gitalk from "gitalk";
 
 export default defineComponent({
   setup() {
